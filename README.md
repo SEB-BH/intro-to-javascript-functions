@@ -30,26 +30,4 @@ This module provides a comprehensive introduction to functions in JavaScript, ai
 
 📖 [Reference Materials](./references/README.md)
 
-## Internal
-
-### Prerequisites
-
-- Intro to Javascript
-- Control Flow in Javascript
-
-### Course landing pages
-
-- [Default Landing Page](https://ga-curriculum.github.io/intro-to-javascript-functions/canvas-landing-pages/fallback)
-- [SEB - Software Engineering Bootcamp](https://ga-curriculum.github.io/intro-to-javascript-functions/canvas-landing-pages/seb)
-
-### Resources
-
-✏️ [Instructor Guide](./internal-resources/instructor-guide.md)
-
-🎥 [Video Hub](./internal-resources/video-hub.md)
-
-🏗️ [Release Notes](./internal-resources/release-notes.md)
-
----
-
 **Find a 👾 bug 👾 or have suggestions? [Let us know](https://ga-curriculum.github.io/universal-resources-internal/module-feedback)!**
