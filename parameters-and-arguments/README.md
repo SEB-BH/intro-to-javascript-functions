@@ -11,8 +11,6 @@ In the examples so far, seeing why functions are so helpful may be difficult. It
 
 Functions are designed to take data input. You might have been wondering why we had an empty set of parentheses in the basic syntax example from earlier. 
 
-When writing a function, we can define placeholders to accept data that will be input to our function, and these placeholders are known as *parameters*.
-
 A more complete example of basic function syntax would include parameters like so: 
 
 ```javascript
@@ -21,6 +19,10 @@ function name(parameter1, parameter2, ...parameterN) {
   return statement;
 }
 ```
+
+When writing a function, we can define placeholders to accept data that will be input to our function, and these placeholders are known as *parameters*.
+
+
 
 Let's write a function that prints `Hello`:
 
