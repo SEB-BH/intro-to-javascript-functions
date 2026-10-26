@@ -22,6 +22,8 @@ function name(parameter1, parameter2, ...parameterN) {
 
 When writing a function, we can define placeholders to accept data that will be input to our function, and these placeholders are known as *parameters*.
 
+<hr>
+
 ### Try it out
 
 Let's write a function that prints `Hello`:
