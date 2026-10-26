@@ -22,9 +22,13 @@ function name(parameter1, parameter2, ...parameterN) {
 }
 ```
 
-> 📚 *Parameters* are the named variables listed in a function's definition that serve as placeholders for the values that will be passed to the function when it is called. 
-> 
-> Parameters act like local variables within a function and can act as placeholders for any data. 
+Let's write a function that prints `Hello`:
+
+```javascript
+function sayHello() {
+  console.log('Hello');
+}
+```
 
 Let's add a `name` parameter to our `sayHello()` function and make use of it in the function body: 
 
