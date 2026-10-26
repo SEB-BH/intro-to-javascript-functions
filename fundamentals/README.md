@@ -81,15 +81,3 @@ Insert Banner Text Here
 ```
 
 > 🧠 Developers might say call, execute, invoke, or run a function. In the context of functions, these are synonyms.
-
-Recap: 
-
-```javascript
-// We define a function to do something:
-function sayHello(){
-  console.log('Hello!');
-}
-
-// And then elsewhere in our code, we call the function to run it:
-sayHello();
-```
