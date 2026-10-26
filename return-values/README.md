@@ -5,169 +5,185 @@
 
 **Learning objective:** By the end of this lesson, students will be able to return data from functions using the `return` statement.
 
-## What is a return value?
+## Returning values from a function
 
-A return value is the output of a function. In other words, it is what a function gives back after it does its job.
+So far, we've used `console.log()` inside our functions to display results in the console.
 
-If a function does not explicitly return a value, it defaults to returning `undefined`. This means the function has not been instructed to supply a result.
+But what if we want to **use the result somewhere else in our code?**
 
-Often, you may want to use the result of a function for further operations. In such cases, the `return` statement is used to specify what value a function should output.
+This is where the **`return` keyword** comes in.
 
-## The `return` statement
+The `return` keyword allows a function to send a value back to the place where it was called.
 
-Use the `return` keyword to return a value from a function.
-
-The `return` keyword can only be used inside of functions. When used, it stops the execution of the function, and the function then evaluates to the return value. 
-
-Let's look at some examples: 
+Let's update our `add()` function to use `return` instead of `console.log()`:
 
 ```javascript
-function addOne(num){
-  return num + 1;
+function add(numA, numB) {
+  return numA + numB
 }
-
-console.log(addOne(3));
-// Prints: 4
 ```
 
-The above works as expected! We are returning the result of adding `num` and `1`. Here's a simplified version of this, similar to what you saw in the Concepts section:
-
-![The value of 3 being supplied to the addOne function with 4 as the output.](./assets/addone-input-output.png)
+Now, when we call the function, it returns the result of the calculation.
 
 ```javascript
-function addOne(num){
-  return 'this is some text';
-  return num + 1;
-}
-
-console.log(addOne(3)); 
-// Prints: 'this is some text'
+add(1, 5) // Returns 6
 ```
 
-Above, the first `return` statement blocks the remainder of the code from running! The function stops executing when the first `return` statement is reached.
+### `console.log()` vs. `return`
+
+Although they might seem similar, `console.log()` and `return` do two different things:
+
+- **`console.log()`** displays a value in the console.
+- **`return`** sends a value back so we can use it elsewhere in our code.
+
+Let's look at what happens when we use `console.log()` instead of `return`:
 
 ```javascript
-function addOne(num){
-  num + 1;
-  return;
+function add(numA, numB) {
+  console.log(numA + numB)
 }
 
-console.log(addOne(3)); 
-// Prints: undefined
+const result = add(2, 3)
+
+console.log(result)
 ```
 
-Finally, we can see that returning without an expression defaults to `undefined`. 
+**Console output:**
 
-This is also the case when we omit the `return` statement entirely, as mentioned earlier:
+```text
+5
+undefined
+```
+
+Why do we see `undefined`?
+
+The function logs `5` to the console, but it doesn't actually return a value.
+
+When a function doesn't explicitly return a value, JavaScript automatically returns `undefined`.
+
+> 💡 **Remember:** Logging a value is not the same as returning it!
+
+### Using returned values
+
+One of the biggest benefits of `return` is that we can store the result of a function in a variable.
+
+Let's use our updated `add()` function:
 
 ```javascript
-function addOne(num){
-  num + 1;
+function add(numA, numB) {
+  return numA + numB
 }
 
-console.log(addOne(3)); 
-// Prints: undefined
+const result = add(1, 5)
+
+console.log(result) // 6
 ```
 
-## Storing and using the return value of a function
-
-It is often useful to store the return value of a function. We can assign the return value of a function to a variable, just like any other value. 
-
-For instance, if we wanted to store the value of invoking `addOne()` and passing in 3 as an argument, we could do something like this: 
+We can also use that returned value in another calculation:
 
 ```javascript
-function addOne(num){
-  return num + 1;
-}
+const result = add(1, 5)
 
-// addOne(3) evaluates to 4
-const incrementedNum = addOne(3);
-// incremetedNum is 4
-
-console.log(incrementedNum); 
-// Prints: 4
+console.log(result * 2) // 12
 ```
 
-## Bringing it all together
+Because our function returns a number, we can use that number just like any other number in JavaScript.
 
-For a more involved example, let's imagine we have a shopping cart that needs to calculate tax when the user is checking out. We can use a `calculateTax()` function to figure out the amount of tax due, then store the return value of that function in the variable `taxAmount` to do further calculations: 
+### `return` stops a function
+
+Another important thing to know is that **when JavaScript reaches a `return` statement, the function immediately stops running.**
+
+For example:
 
 ```javascript
-function calculateTax(subtotal){
-  // calculate a flat tax of 7%
-  const taxDue = subtotal * (7 / 100);
-  return taxDue;
+function greet(name) {
+  return `Hello, ${name}!`
+
+  console.log("This will never run")
 }
 
-function calculateTotal(){
-  // normally, cartValue would be calculated elsewhere
-  // we're hard coding it to simplify this example
-  const cartValue = 45;
-  // remember that we can pass variables like cartValue to functions
-
-  // store the return value of the calculateTax function
-  const taxAmount = calculateTax(cartValue);
-
-  // we can return the cart total plus the required tax
-  return cartValue + taxAmount;
-}
-
-console.log(calculateTotal()); 
-// Prints: 48.15
+console.log(greet("Sara")) // Hello, Sara!
 ```
 
-The ability to store and use return values allows us to use *helper functions*, like `calculateTax` above, to keep our code concise and legible.
+The `console.log()` inside the function never runs because it comes after the `return` statement.
 
-> 📚 *Helper functions* are functions that perform a part of the calculations of another function - `calculateTax()` above is a great example. 
+> 💡 Any code after an executed `return` statement will not run.
 
-Breaking up the tasks of a larger function into smaller helper functions can make it much easier to understand what a function as a whole is doing. 
+### Returning values with conditionals
 
-Another example is below. Don't get caught up in the amount of code here or the specifics of what each one of these helper functions would do. Focus on the big picture. 
+We can also use `return` inside an `if` statement to return different values depending on a condition.
 
-Note how the `compileAndSend` function's job is only to compile a report and send it. The helper functions that we've defined would handle the heavy lifting of that task. Because this code delegates its tasks to these smaller helper functions, it is easier to read at a high level.
+For example:
 
-```javascript 
-function compileAndSend() {
-  const sales = getSalesData();
-  const labor = getLaborCosts();
-  const budget = getBudget();
-  const report = generateReport(sales, labor, budget);
-  sendReport(report);
+```javascript
+function checkAge(age) {
+  if (age >= 18) {
+    return "Adult"
+  } else {
+    return "Minor"
+  }
 }
 
-// Run the function
-compileAndSend();
+console.log(checkAge(25)) // Adult
+console.log(checkAge(15)) // Minor
+```
 
-/*--- helper functions ---*/
+This function has two `return` statements, but only one will run each time we call the function.
 
-function getSalesData() {
-  // code to calculate sales
-  return sales;
-}
+- If the age is 18 or older, the function returns `"Adult"`.
+- Otherwise, the function returns `"Minor"`.
 
-function getLaborCosts() {
-  // code to calculate labor costs
-  return labor;
-}
+Because `return` stops the function, we can also write this without `else`:
 
-function getBudget() {
-  // code to calculate budget
-  return budget;
-}
+```javascript
+function checkAge(age) {
+  if (age >= 18) {
+    return "Adult"
+  }
 
-function generateReport(sales, labor, budget) {
-  // code to generate report
-  return report;
-}
-
-function sendReport(report) {
-  // code to send the report somewhere
+  return "Minor"
 }
 ```
 
-Despite `compileAndSend` being quite a large function with a lot of code, the helper functions make it reasonable to follow. We're getting the sales data, labor costs, and the budget. Then, we're compiling that data into a report, and sending it somewhere. 
+Both versions work the same way!
 
-All of this is possible because we're storing the return values of each of these helper functions!
+### 🎓 You Do
+
+**Part 1: Returning a calculation**
+
+Create a function called `multiply()` that:
+
+1. Accepts two numbers as parameters.
+2. Multiplies the two numbers.
+3. Returns the result.
+
+Call the function, store the returned value in a variable, and log that variable to the console.
+
+**Expected result:**
+
+```javascript
+const answer = multiply(4, 5)
+
+console.log(answer) // 20
+```
+
+**Part 2: Returning a value based on a condition**
+
+Create a function called `hasPassed()` that:
+
+1. Accepts a student's score as a parameter.
+2. Returns `true` if the score is 70 or higher.
+3. Returns `false` if the score is below 70.
+
+**Expected results:**
+
+```javascript
+console.log(hasPassed(85)) // true
+console.log(hasPassed(45)) // false
+console.log(hasPassed(70)) // true
+```
+
+> 🧠 **Good habit:** Use `return` when you want your function to provide a result that other parts of your code can use. Use `console.log()` when you want to check or display values in the console while testing your code.
 
 ## 🎓 You Do
 
