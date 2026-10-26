@@ -18,6 +18,11 @@ This module provides a comprehensive introduction to functions in JavaScript, ai
 | [Return Values](./return-values/README.md)                          | Using the `return` statement, storing returned values, introduction to helper functions       |
 | [Expressions](./expressions/README.md)                              | Function declarations vs. function expressions, anonymous functions, variable assignment      |
 | [Arrow Function Expressions](./arrow-functions/README.md)           | Composing Arrow functions                                                                     |
+
+## Level up (optional)
+
+| Lesson | Skills |
+| --- | --- |
 | [Advanced Arrow Functions](./advanced-arrow-functions/README.md)    | Implicit returns, single parameter syntax, and arrow function limitations with `this` keyword |
 | [Default Parameters](./default-parameters/README.md)                | Implementing default parameters in JavaScript functions                                       |
 | [Hoisting](./hoisting/README.md)                                    | Understanding function hoisting, differences between function declarations and expressions    |
