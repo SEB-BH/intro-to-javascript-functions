@@ -58,43 +58,31 @@
         {
           "friendlyName": "Advanced Arrow Functions",
           "dirName": "advanced-arrow-functions",
-          "type": "Content",
+          "type": "Level Up content",
           "videoUrl": ""
         },
         {
           "friendlyName": "Default Parameters",
           "dirName": "default-parameters",
-          "type": "Content",
+          "type": "Level Up content",
           "videoUrl": ""
         },
         {
           "friendlyName": "Hoisting",
           "dirName": "hoisting",
-          "type": "Content",
+          "type": "Level Up content",
           "videoUrl": ""
         },
         {
           "friendlyName": "Fewer Arguments than Parameters",
           "dirName": "fewer-arguments",
-          "type": "Content",
+          "type": "Level Up content",
           "videoUrl": ""
         },
         {
           "friendlyName": "Rest Parameters",
           "dirName": "rest-parameters",
-          "type": "Content",
-          "videoUrl": ""
-        },
-        {
-          "friendlyName": "Immediately Invoked Function Expressions IIFEs",
-          "dirName": "iife",
-          "type": "Content",
-          "videoUrl": ""
-        },
-        {
-          "friendlyName": "Nesting Functions",
-          "dirName": "nesting-functions",
-          "type": "Content",
+          "type": "Level Up content",
           "videoUrl": ""
         }
       ],
@@ -193,18 +181,6 @@
         {
           "friendlyName": "Rest Parameters",
           "dirName": "rest-parameters",
-          "type": "Level Up content",
-          "videoUrl": ""
-        },
-        {
-          "friendlyName": "Immediately Invoked Function Expressions IIFEs",
-          "dirName": "iife",
-          "type": "Level Up content",
-          "videoUrl": ""
-        },
-        {
-          "friendlyName": "Nesting Functions",
-          "dirName": "nesting-functions",
           "type": "Level Up content",
           "videoUrl": ""
         }
