@@ -23,8 +23,6 @@ This module provides a comprehensive introduction to functions in JavaScript, ai
 | [Hoisting](./hoisting/README.md)                                    | Understanding function hoisting, differences between function declarations and expressions    |
 | [Fewer Arguments than Parameters](./fewer-arguments/README.md)      | Handling fewer arguments in functions, undefined parameters                                   |
 | [Rest Parameters](./rest-parameters/README.md)                      | Using rest parameters to handle multiple function arguments as an array                       |
-| [Immediately Invoked Function Expressions (IIFE)](./iife/README.md) | Using IIFEs for variable encapsulation and global scope prevention                            |
-| [Nesting Functions](./nesting-functions/README.md)                  | Nesting functions and creating helper functions within main functions                         |
 
 ## References
 
