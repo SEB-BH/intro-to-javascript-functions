@@ -9,14 +9,7 @@
 
 In the examples so far, seeing why functions are so helpful may be difficult. It's nice not to have console.logs over and over, but if a function always produces the same result, the usefulness is limited, right? 
 
-Functions are designed to take data input. You might have been wondering why we had an empty set of parentheses in the basic syntax example from earlier: 
-
-```javascript
-function name() {
-  statements;
-  return statement;
-}
-```
+Functions are designed to take data input. You might have been wondering why we had an empty set of parentheses in the basic syntax example from earlier. 
 
 When writing a function, we can define placeholders to accept data that will be input to our function, and these placeholders are known as *parameters*.
 
