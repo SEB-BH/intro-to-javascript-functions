@@ -23,20 +23,54 @@ function add(numA, numB) {
 }
 ```
 
-Now, when we call the function, it returns the result of the calculation.
+Now, let's call our function:
 
 ```javascript
-add(1, 5) // Returns 6
+add(1, 5)
 ```
 
-### `console.log()` vs. `return`
+When JavaScript runs this code:
 
-Although they might seem similar, `console.log()` and `return` do two different things:
+1. It goes to our `add()` function.
+2. It replaces `numA` with `1` and `numB` with `5`.
+3. It calculates `1 + 5`.
+4. The `return` statement **sends the answer (`6`) back to the place where we called the function**.
 
-- **`console.log()`** displays a value in the console.
-- **`return`** sends a value back so we can use it elsewhere in our code.
+Think of it this way:
 
-Let's look at what happens when we use `console.log()` instead of `return`:
+```javascript
+add(1, 5) // This gives us the value 6
+```
+
+But there's something important to understand: **returning a value does not automatically print it in the terminal.**
+
+If we want to see the answer in our terminal, we need to use `console.log()`:
+
+```javascript
+console.log(add(1, 5)) // 6
+```
+
+Here's what happens:
+
+1. JavaScript runs `add(1, 5)` first.
+2. The function returns `6`.
+3. `console.log()` prints that `6` in our terminal.
+
+So you can think of this:
+
+```javascript
+console.log(add(1, 5))
+```
+
+As working like this:
+
+```javascript
+console.log(6)
+```
+
+> 💡 **Remember:** `return` gives us a value we can use in our code. `console.log()` simply lets us see that value in the terminal.
+
+Let's look at what happens when we use `console.log()` instead of `return` inside of our function:
 
 ```javascript
 function add(numA, numB) {
@@ -184,22 +218,3 @@ console.log(hasPassed(70)) // true
 ```
 
 > 🧠 **Good habit:** Use `return` when you want your function to provide a result that other parts of your code can use. Use `console.log()` when you want to check or display values in the console while testing your code.
-
-## 🎓 You Do
-
-Write a function named `computeArea`.
-
-It will have two parameters: `width` and `height`.
-
-It will compute the area of a rectangle (*width* * *height*) and return a string in the following form:
-
-> The area of a rectangle with a width of ___ and a height of ___ is ___ square units.
-
-Invoke the function to test it:
-
-```javascript
-console.log(computeArea(5, 25));
-// Prints: 
-// The area of a rectangle with a width of 5 
-// and a height of 25 is 125 square units.
-```
