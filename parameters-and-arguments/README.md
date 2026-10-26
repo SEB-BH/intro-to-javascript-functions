@@ -112,7 +112,7 @@ Let's declare a new function:
 
 ```javascript
 function add(numA, numB) {
-  return numA + numB;
+  console.log(numA + numB)
 }
 ```
 
@@ -122,15 +122,11 @@ Try to name your parameters sensibly to avoid confusion, and be mindful of the d
 add(1, 5);
 ```
 
+
 Arguments are assigned to parameters positionally, which means the order of parameters and arguments matters. The first argument passed to a function will align with the first parameter. The second argument will align with the second parameter, and so forth.
 
 ![A diagram demonstrating that the order arguments are provided to a function matters](./assets/multiple-parameters.png)
 
-This mnemonic device may help you remember the difference between an argument and a parameter:
-- ***A***rguments are the ***A***ctual value passed to a function.
-- ***P***arameters are a ***P***laceholder. 
-
-Parameters become local variables inside the function body. They are only accessible inside the function in which they are defined. Just like when naming variables and functions, it's vital to name parameters using identifiers representative of the data they will hold. 
 
 ## ❓ Review questions 
 
@@ -138,17 +134,6 @@ Parameters become local variables inside the function body. They are only access
 
 - Explain how *arguments* and *parameters* are matched up.
 
-- Given this code:
-
-  ```javascript
-  function add(numA, numB) {
-    return numA + numB;
-  }
-
-  add(1, 5);
-  ```
-  
-  Will anything be logged to the console? Why or why not?
 
 ## 🎓 You Do
 
