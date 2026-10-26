@@ -52,42 +52,4 @@ Let's practice using this new syntax by converting a function declaration into a
 
 2. Convert this function into an arrow function expression.
 
-## ❓ Review questions
 
-### Given this code:
-
-```javascript
-const sumTwoNumbers = (numA, numB) => {
-  return numA + numB;
-}
-
-const sum = sumTwoNumbers(5, 10);
-```
-
-1. What is the job of the `sumTwoNumbers` function?
-2. Is `numA` a parameter or an argument?
-3. What will the value of `numA` be inside the `sumTwoNumbers` function?
-4. Will `numA` have a value outside of the `sumTwoNumbers` function? If it does, what will it be?
-5. What data type will the value returned from the `sumTwoNumbers` function be?
-6. What will be returned from the `sumTwoNumbers` function?
-7. What would print to the console if we logged `sum` after the final line?
-8. How many arguments are passed to the `sumTwoNumbers` function? What are they?
-9. How many parameters does the `sumTwoNumbers` function accept? What are they?
-
-### Given this code:
-
-```javascript
-const emphasize = (str) => {
-  return `${str} ${str}!`;
-}
-
-emphasize('really');
-```
-
-1. What does the `emphasize` function do?
-2. What will the value of `str` be inside of the `emphasize` function?
-3. What data type will the value returned from the `emphasize` function be?
-4. Will what is returned from the `emphasize` function be usable later in this program? If not, how could we make it so that it is?
-5. How could we make it so that what is returned from the `emphasize` function is shown in the console?
-6. How many arguments are passed to the `emphasize` function? What are they?
-7. How many parameters does the `emphasize` function accept? What are they?
